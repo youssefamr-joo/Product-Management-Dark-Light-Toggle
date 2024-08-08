@@ -17,28 +17,42 @@ A simple CRUD (Create, Read, Update, Delete) application designed for managing p
 
 - A modern web browser (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge).
 
-Usage
+## Usage
 
-Adding Products
-1- Enter product details in the input fields.
-2- Click the "Create" button to add the product to the list.
+ - Adding Products
+    
+    1- Enter product details in the input fields.
+        
+   2- Click the "Create" button to add the product to the list.
 
-Searching Products
-1- Use the search bar to filter products.
-2- Click "Search By Title" or "Search By Category" to change the search criteria.
 
-Updating Products
-1- Click the "Edit" icon next to a product to modify its details.
-2- Update the fields and click "Update" to save changes.
+- Searching Products
 
-Deleting Products
-1- Click the "Delete" icon next to a product to remove it.
-2- Click "Delete All" to remove all products from the list.
+    1- Use the search bar to filter products.
+    
+    2- Click "Search By Title" or "Search By Category" to change the search criteria.
 
-Dark/Light Mode Toggle
+- Updating Products
+- 
+    1- Click the "Edit" icon next to a product to modify its details.
+      
+    2- Update the fields and click "Update" to save changes.
+
+
+- Deleting Products
+  
+    1- Click the "Delete" icon next to a product to remove it.
+      
+    2- Click "Delete All" to remove all products from the list.
+
+
+- Dark/Light Mode Toggle
+- 
 1- Click the moon/sun icon at the top of the page to switch between dark and light modes.
+  
 
 Code Structure
+
 - index.html: The main HTML file for the application.
 - css/style.css: Stylesheet for styling the application.
 - js/main.js: JavaScript file containing the application logic.
