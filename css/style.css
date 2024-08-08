@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #222;
+  --text-main-color: #fff;
+  --second-color: #1c06e3;
+  --main-font: Arial, sans-serif;
+  --bg-inputs: #111;
+  --bg-focus-inputs: #010101;
+  --btn-hover: #110484;
+}
+
+/* Position and style the toggle icon */
+.toggle-modes {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.toggle-modes i {
+  font-size: 20px;
+  color: var(--text-main-color);
+  transition: color 0.3s ease;
+}
+
+.toggle-modes i.sun-mode {
+  color: yellow;
+}
+
+/* Light mode styles */
+body.light-mode {
+  --body-color: #f0f0f0;
+  --text-main-color: #000;
+  --bg-inputs: #fff;
+  --bg-focus-inputs: #e0e0e0;
+  --second-color: #f4a261;
+  --btn-hover: #e76f51;
+}
+body.light-mode input::placeholder {
+  color: var(--text-main-color);
+}
+body.light-mode input:focus::placeholder {
+  color: var(--second-color);
+}
+body.light-mode .toggle-modes i {
+  color: var(--text-main-color);
+}
+
+body.light-mode table th {
+  color: var(--second-color);
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--body-color);
+  color: var(--text-main-color);
+}
+
+.crud {
+  width: 80%;
+  margin: auto;
+}
+
+.head {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.head h1 {
+  font-size: 35px;
+  margin: 10px 0;
+  letter-spacing: 8px;
+}
+
+.head p {
+  font-size: 18px;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 18px 5px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: var(--bg-inputs);
+  color: var(--text-main-color);
+  transition: background-color 0.3s ease, border 0.2s ease-in-out,
+    transform 0.3s ease-in;
+}
+
+input:focus {
+  background-color: var(--bg-focus-inputs);
+  border: 2px solid var(--second-color);
+  transform: scale(1.04);
+}
+
+input::placeholder {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: var(--text-main-color);
+  font-style: italic;
+  text-transform: capitalize;
+  transition: all 0.8s ease;
+}
+
+input:focus::placeholder {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--second-color);
+  font-size: 10px;
+}
+
+.price {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.price input {
+  width: 20%;
+}
+
+small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 10%;
+  font-size: 12px;
+  background-color: var(--second-color);
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  background-color: var(--second-color);
+  color: var(--text-main-color);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+  letter-spacing: 1.5;
+}
+
+.btn-search .btn {
+  width: 45%;
+}
+
+.btn-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-res {
+  min-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+table th {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+table th,
+table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tbody td {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+table tbody td a {
+  color: var(--second-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.invalid {
+  border: 2px solid red;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+@media (max-width: 1022px) {
+  .price {
+    flex-direction: column;
+    align-items: center;
+  }
+  .price input {
+    width: 100%;
+  }
+  small {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+  .crud {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .crud {
+    width: 97%;
+  }
+  .head h1 {
+    font-size: 30px;
+  }
+  .head p {
+    font-size: 16px;
+  }
+}

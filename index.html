@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Toggle Icon -->
+    <div class="toggle-modes">
+      <i id="toggleIcon" class="fas fa-moon"></i>
+    </div>
+
+    <section class="crud">
+      <div class="head">
+        <h1>crud</h1>
+        <p>product management system</p>
+      </div>
+
+      <div class="inputs">
+        <!-- title -->
+        <div class="form-group">
+          <input placeholder="title" type="text" id="title" />
+        </div>
+
+        <div class="form-group price">
+          <input
+            onkeyup="getTotal()"
+            placeholder="price"
+            type="number"
+            id="price"
+          />
+
+          <input
+            onkeyup="getTotal()"
+            placeholder="taxes"
+            type="number"
+            id="taxes"
+          />
+
+          <input
+            onkeyup="getTotal()"
+            placeholder="ads"
+            type="number"
+            id="ads"
+          />
+
+          <input
+            onkeyup="getTotal()"
+            placeholder="discount"
+            type="number"
+            id="discount"
+          />
+
+          <small id="total-box">Total : <span id="total"> 0</span></small>
+        </div>
+
+        <div class="form-group">
+          <input placeholder="count" type="number" id="count" />
+        </div>
+
+        <div class="form-group">
+          <input placeholder="category" type="text" id="category" />
+        </div>
+
+        <button class="btn" id="submit">Create</button>
+      </div>
+
+      <div class="outputs">
+        <div class="search-block">
+          <input type="text" id="search" placeholder="search..." />
+
+          <div class="btn-search">
+            <button class="btn" id="searchTitle">Search By Title</button>
+            <button class="btn" id="searchCategory">Search By Category</button>
+          </div>
+        </div>
+
+        <div id="delete-all"></div>
+
+        <div class="table-res">
+          <table>
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>count</th>
+                <th>category</th>
+                <th colspan="2">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="productsTable">
+              <!-- products will be added here -->
+              <!-- <tr>
+                <td>1</td>
+                <td>product 1</td>
+                <td>100</td>
+                <td>5</td>
+                <td>2</td>
+                <td>5</td>
+                <td>150</td>
+                <td>electronics</td>
+                <td>
+                  <a><i id="update" class="fas fa-edit"></i></a>
+                </td>
+                <td>
+                  <a><i id="delete" class="fas fa-trash"></i></a>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
