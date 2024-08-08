@@ -22,18 +22,22 @@ Usage
 
 Adding Products
   1-Enter product details in the input fields.
+  
   2-Click the "Create" button to add the product to the list.
 
 Searching Products
   1-Use the search bar to filter products.
+  
   2-Click "Search By Title" or "Search By Category" to change the search criteria.
 
 Updating Products
   1-Click the "Edit" icon next to a product to modify its details.
+  
   2-Update the fields and click "Update" to save changes.
 
 Deleting Products
   1-Click the "Delete" icon next to a product to remove it.
+  
   2-Click "Delete All" to remove all products from the list.
 
 Dark/Light Mode Toggle
@@ -41,8 +45,12 @@ Dark/Light Mode Toggle
 
 Code Structure
 index.html: The main HTML file for the application.
+
 css/style.css: Stylesheet for styling the application.
+
 js/main.js: JavaScript file containing the application logic.
 
+
 Contributing
+
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request or report an issue.
