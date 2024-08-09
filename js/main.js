@@ -213,7 +213,7 @@ function updateProduct(index) {
 //? search
 let searchMood = "title";
 btnTitleProduct.addEventListener("click", function () {
-  searchMood = "Title";
+  searchMood = "title";
   modifyInput(searchMood);
   searchProduct.value = ``;
   displayProduct();
