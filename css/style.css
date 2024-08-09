@@ -21,17 +21,14 @@
   right: 20px;
   cursor: pointer;
 }
-
 .toggle-modes i {
   font-size: 20px;
   color: var(--text-main-color);
   transition: color 0.3s ease;
 }
-
 .toggle-modes i.sun-mode {
   color: yellow;
 }
-
 /* Light mode styles */
 body.light-mode {
   --body-color: #f0f0f0;

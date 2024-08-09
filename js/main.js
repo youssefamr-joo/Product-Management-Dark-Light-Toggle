@@ -48,6 +48,7 @@ function getTotal() {
     document.getElementById("total-box").style.backgroundColor = "";
   }
 }
+
 //? create product
 function createProduct() {
   let product = {
@@ -90,7 +91,7 @@ function createProduct() {
   displayProduct();
   clearData(); // Clear inputs after creation
 }
-//clean data
+//! clean data
 function validateInputs() {
   // Select all input fields inside the .inputs div
   const inputs = document.querySelectorAll(".inputs input");
@@ -113,6 +114,7 @@ function validateInputs() {
     }
   });
 }
+
 function clearValidationClasses() {
   const inputs = document.querySelectorAll(".inputs input");
   inputs.forEach((input) => {
@@ -120,14 +122,17 @@ function clearValidationClasses() {
   });
   submitProduct.classList.remove("disabled");
 }
+
 submitProduct.addEventListener("click", function () {
   createProduct();
   document.getElementById("total-box").style.backgroundColor = "";
 });
+
 //? save to local storage
 function saveToLocalStorage() {
   localStorage.setItem("products", JSON.stringify(products));
 }
+
 //? clear inputs
 function clearData() {
   titleProduct.value = "";
@@ -139,6 +144,7 @@ function clearData() {
   countProduct.value = "";
   categoryProduct.value = "";
 }
+
 //? display
 function displayProduct() {
   getTotal();
@@ -175,6 +181,7 @@ function displayProduct() {
     deleteAll.innerHTML = "";
   }
 }
+
 //? delete //delete all
 function deleteProduct(index) {
   console.log(index);
@@ -183,12 +190,13 @@ function deleteProduct(index) {
   saveToLocalStorage();
   displayProduct();
 }
+
 function deleteAllProduct() {
   products = [];
   saveToLocalStorage();
   displayProduct();
 }
-//count
+
 //? update
 function updateProduct(index) {
   clearValidationClasses();
@@ -210,6 +218,7 @@ function updateProduct(index) {
   });
   mood = "update";
 }
+
 //? search
 let searchMood = "title";
 btnTitleProduct.addEventListener("click", function () {
@@ -218,16 +227,19 @@ btnTitleProduct.addEventListener("click", function () {
   searchProduct.value = ``;
   displayProduct();
 });
+
 btnCategoryProduct.addEventListener("click", function () {
   searchMood = "category";
   modifyInput(searchMood);
   searchProduct.value = ``;
   displayProduct();
 });
+
 function modifyInput(name) {
   searchProduct.focus();
   searchProduct.placeholder = ` Search By ${name} `;
 }
+
 searchProduct.addEventListener("input", function () {
   let cartona = ``;
   //convert string to lower case
@@ -291,5 +303,4 @@ toggleIcon.addEventListener("click", () => {
     toggleIcon.classList.add("fa-moon");
   }
 });
-
-// i need to refactor it first coding crud
+// still not refactoring
